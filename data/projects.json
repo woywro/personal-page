@@ -1,0 +1,24 @@
+{
+  "projects": [
+    {
+      "href": "https://github.com/woywro/next-lazy-hydration-on-scroll",
+      "title": "next-lazy-hydration-on-scroll",
+      "description": "Progressive hydration of prerendered components"
+    },
+    {
+      "href": "https://github.com/Blazity/next-maintenance-mode",
+      "title": "next-maintenance-mode",
+      "description": "Middleware for handling page maintenance mode on platforms like Vercel."
+    },
+    {
+      "href": "https://github.com/woywro/next-loading-box",
+      "title": "next-loading-box",
+      "description": "Simple React component designed for Next.js to manage route change loading states."
+    },
+    {
+      "href": "https://github.com/woywro/next-api-rate-limit",
+      "title": "next-api-rate-limit",
+      "description": "Cost Efficient API Routes Rate Limiting with Redis (KV/Upstash) and LRU Cache."
+    }
+  ]
+}
