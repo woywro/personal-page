@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { projects as projectsData } from '../../data/projects.json';
 import { timeline as timelineData } from '../../data/timeline.json';
+import { Star } from 'lucide-react';
 
 export const revalidate = 3600;
 
@@ -175,10 +176,11 @@ const CustomLink = ({
             <h3 className="text-sm font-lg">{title}</h3>
             {!!stars && (
               <div
-                className="ml-2 flex items-center text-xs text-gray-500"
+                className="ml-2 flex items-center gap-1 text-xs text-gray-500"
                 aria-label={`${stars} GitHub stars`}
               >
-                ★{stars}
+                {stars}
+                <Star size={10} />
               </div>
             )}
           </div>
