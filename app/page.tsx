@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { projects as projectsData } from '../../data/projects.json';
-import { timeline as timelineData } from '../../data/timeline.json';
+import { projects as projectsData } from '../data/projects.json';
+import { timeline as timelineData } from '../data/timeline.json';
 import { Star } from 'lucide-react';
 
 export const revalidate = 3600;
