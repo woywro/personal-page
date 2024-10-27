@@ -39,27 +39,27 @@ export default async function Home() {
   );
 
   return (
-    <div className="mx-auto max-w-[600px] overflow-x-hidden px-4 py-8 text-gray-900 antialiased sm:py-16">
-      <header className="mb-16 sm:mb-32">
+    <div className="mx-auto max-w-[600px] overflow-x-hidden px-4 py-12 text-gray-800 antialiased sm:py-24">
+      <header className="mb-24 sm:mb-40">
         <h1 className="text-md mb-2">
           <Link
             href="/"
-            className="text-md inline-block no-underline hover:text-gray-700 transition-colors"
+            className="text-md inline-block font-light no-underline hover:text-gray-600 transition-colors"
           >
             Wojciech Wrotek
           </Link>
         </h1>
-        <p className="text-sm mt-1 leading-none text-gray-600">
+        <p className="text-sm mt-2 text-gray-500 font-light">
           React/Next.js Software Developer
         </p>
       </header>
 
-      <main className="space-y-16 sm:space-y-32">
+      <main className="space-y-24 sm:space-y-40">
         <section aria-labelledby="about-heading">
-          <h2 id="about-heading" className="mb-3 text-lg">
+          <h2 id="about-heading" className="mb-6 text-lg font-light">
             About
           </h2>
-          <p className="text-sm text-gray-700">
+          <p className="text-sm text-gray-600 font-light leading-relaxed">
             As a React/Next.js Software Developer at{' '}
             <a
               href="https://blazity.com/"
@@ -153,7 +153,6 @@ const CustomLink = ({
   title,
   description,
   stars,
-  withNoDot,
 }: TimelineItem & { stars?: number }) => {
   const colorClass = getColorFromTitle(title);
 
@@ -162,21 +161,15 @@ const CustomLink = ({
       href={href}
       rel="noopener noreferrer"
       target="_blank"
-      className="block rounded-md p-2 py-1 -ml-2 no-underline hover:bg-gray-100 transition-colors"
+      className={`block border-l-2 border-gray-200 pl-4 py-2 no-underline ${colorClass} transition-all`}
     >
       <div className="flex items-start">
-        {!withNoDot && (
-          <div
-            className={`w-2 h-2 rounded-full ${colorClass} mt-1.5 mr-2 flex-shrink-0`}
-            aria-hidden="true"
-          ></div>
-        )}
         <div className="flex-grow">
           <div className="flex align-center justify-between">
-            <h3 className="text-sm font-lg">{title}</h3>
+            <h3 className="text-sm font-light">{title}</h3>
             {!!stars && (
               <div
-                className="ml-2 flex items-center gap-1 text-xs text-gray-500"
+                className="ml-2 flex items-center gap-1 text-xs text-gray-400"
                 aria-label={`${stars} GitHub stars`}
               >
                 {stars}
@@ -184,7 +177,7 @@ const CustomLink = ({
               </div>
             )}
           </div>
-          <p className="text-sm font-md text-gray-600">{description}</p>
+          <p className="text-sm font-light text-gray-500 mt-1">{description}</p>
         </div>
       </div>
     </a>
@@ -192,8 +185,8 @@ const CustomLink = ({
 };
 
 const getColorFromTitle = (title: string): string => {
-  if (title.startsWith('Education:')) return 'bg-green-500';
-  if (title.startsWith('Open Source:')) return 'bg-blue-500';
-  if (title.startsWith('Article:')) return 'bg-purple-500';
-  return 'bg-gray-500';
+  if (title.startsWith('Education:')) return 'hover:border-green-500';
+  if (title.startsWith('Open Source:')) return 'hover:border-blue-500';
+  if (title.startsWith('Article:')) return 'hover:border-purple-500';
+  return 'hover:border-gray-500';
 };

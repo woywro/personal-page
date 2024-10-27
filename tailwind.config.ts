@@ -14,6 +14,9 @@ const config: Config = {
         blazity: '#fc4404',
         uep: '#078847',
       },
+      fontWeight: {
+        light: '300',
+      },
     },
   },
   plugins: [],
