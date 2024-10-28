@@ -6,6 +6,9 @@ import { siteUrl } from '../lib/consts';
 const name = 'Wojciech Wrotek';
 
 export const metadata: Metadata = {
+  title: 'Wojciech Wrotek',
+  description:
+    'React/Next.js Software Developer specializing in building fast & scalable web applications.',
   applicationName: name,
   authors: [
     {
@@ -18,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: name,
     description:
-      "I'm React/Next.js Software Developer specializing in building fast & scalable web applications.",
+      'React/Next.js Software Developer specializing in building fast & scalable web applications.',
     locale: 'en_US',
     type: 'website',
   },
