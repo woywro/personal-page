@@ -36,7 +36,7 @@ function getColorFromTitle(title: string): string {
   <div class="mx-auto max-w-[600px] overflow-x-hidden px-4 py-12 text-gray-800 antialiased sm:py-24">
     <header class="mb-24 sm:mb-40">
       <h1 class="text-md mb-2">
-        <a href="/" class="text-md inline-block font-light no-underline hover:text-gray-600 transition-colors">
+        <a href="/" class="text-lg inline-block font-light no-underline hover:text-gray-600 transition-colors">
           Wojciech Wrotek
         </a>
       </h1>
@@ -47,7 +47,7 @@ function getColorFromTitle(title: string): string {
 
     <main class="space-y-24 sm:space-y-40">
       <section aria-labelledby="about-heading">
-        <h2 id="about-heading" class="mb-6 text-lg font-light">About</h2>
+        <h2 id="about-heading" class="mb-6 font-light text-lg">About</h2>
         <p class="text-sm text-gray-600 font-light leading-relaxed">
           As a React/Next.js Software Developer at{' '}
           <a
@@ -75,7 +75,7 @@ function getColorFromTitle(title: string): string {
       </section>
 
       <section aria-labelledby="open-source-heading">
-        <h2 id="open-source-heading" class="mb-3 text-lg">Open Source</h2>
+        <h2 id="open-source-heading" class="mb-6 font-light text-lg">Open Source</h2>
         <ul class="space-y-2">
           {projectsWithStars.map((project) => (
             <li>
@@ -120,7 +120,7 @@ function getColorFromTitle(title: string): string {
       </section>
 
       <section aria-labelledby="timeline-heading">
-        <h2 id="timeline-heading" class="text-lg mb-3">Timeline</h2>
+        <h2 id="timeline-heading" class="mb-6 font-light text-lg">Timeline</h2>
         <ol class="space-y-8">
           {recentTimelineData.map((yearData) => (
             <li class="relative w-full">
@@ -149,18 +149,10 @@ function getColorFromTitle(title: string): string {
             </li>
           ))}
         </ol>
-        <!-- <div class="w-full flex mt-6 justify-end">
-          <a
-            href="/timeline"
-            class="text-sm text-blue-500 hover:text-blue-800 transition-colors"
-          >
-            See full timeline →
-          </a>
-        </div> -->
       </section>
 
       <section aria-label="Social links">
-        <p class="text-sm text-gray-700">
+        <p class="text-sm font-light text-gray-700">
           More about me on{' '}
           <a
             href="https://www.linkedin.com/in/wojtek-wrotek-8b337519b/"
