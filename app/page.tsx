@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { projects as projectsData } from '../data/projects.json';
-import { timeline as timelineData } from '../data/timeline.json';
+import { timeline as fullTimelineData } from '../data/timeline.json';
 import { Star } from 'lucide-react';
 
 export const revalidate = 3600;
@@ -31,6 +31,9 @@ async function getGitHubStars(repoUrl: string): Promise<number> {
 }
 
 export default async function Home() {
+  // Get only the most recent year's events
+  const recentTimelineData = [fullTimelineData[0]]; // Takes just the first (most recent) year
+
   const projectsWithStars = await Promise.all(
     projectsData.map(async (project) => ({
       ...project,
@@ -92,18 +95,18 @@ export default async function Home() {
           <ul className="space-y-2">
             {projectsWithStars.map((project) => (
               <li key={project.href}>
-                <CustomLink {...project} withNoDot />
+                <CustomLink {...project} />
               </li>
             ))}
           </ul>
         </section>
 
         <section aria-labelledby="timeline-heading">
-          <h2 id="timeline-heading" className="mb-3 text-lg">
+          <h2 id="timeline-heading" className="text-lg mb-3">
             Timeline
           </h2>
           <ol className="space-y-8">
-            {timelineData.map((yearData) => (
+            {recentTimelineData.map((yearData) => (
               <li key={yearData.year} className="relative w-full">
                 <time className="mb-2 text-sm font-medium text-gray-500">
                   {yearData.year}
@@ -118,6 +121,14 @@ export default async function Home() {
               </li>
             ))}
           </ol>
+          <div className="w-full flex mt-6 justify-end">
+            <Link
+              href="/timeline"
+              className="text-sm text-blue-500 hover:text-blue-800 transition-colors"
+            >
+              See whole timeline →
+            </Link>
+          </div>
         </section>
 
         <section aria-label="Social links">

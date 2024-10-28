@@ -6,7 +6,7 @@ import { siteUrl } from '../lib/consts';
 const name = 'Wojciech Wrotek';
 
 export const metadata: Metadata = {
-  title: 'Wojciech Wrotek',
+  title: name,
   description:
     'React/Next.js Software Developer specializing in building fast & scalable web applications.',
   applicationName: name,
