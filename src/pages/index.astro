@@ -22,7 +22,6 @@ const projectsWithStars = await Promise.all(
   }))
 );
 
-const recentTimelineData = timeline
 
 function getColorFromTitle(title: string): string {
   if (title.startsWith('Education:')) return 'hover:border-green-500';
@@ -122,7 +121,7 @@ function getColorFromTitle(title: string): string {
       <section aria-labelledby="timeline-heading">
         <h2 id="timeline-heading" class="mb-6 font-light text-lg">Timeline</h2>
         <ol class="space-y-8">
-          {recentTimelineData.map((yearData) => (
+          {timeline.map((yearData) => (
             <li class="relative w-full">
               <time class="mb-2 text-sm font-medium text-gray-500">
                 {yearData.year}
