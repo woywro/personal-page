@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { ViewTransitions } from 'next-view-transitions';
 
 import './globals.css';
 import { siteUrl } from '../lib/consts';
@@ -34,8 +35,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`font-sans bg-white relative`}>{children}</body>
-    </html>
+    <ViewTransitions>
+      <html lang="en">
+        <body className={`font-sans bg-white relative`}>{children}</body>
+      </html>
+    </ViewTransitions>
   );
 }

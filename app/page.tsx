@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'next-view-transitions';
 import { projects as projectsData } from '../data/projects.json';
 import { timeline as fullTimelineData } from '../data/timeline.json';
 import { Star } from 'lucide-react';

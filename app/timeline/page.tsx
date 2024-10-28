@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'next-view-transitions';
 import { timeline as timelineData } from '../../data/timeline.json';
 import { CustomLink } from '../components/CustomLink';
 
