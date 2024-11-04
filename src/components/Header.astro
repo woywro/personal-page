@@ -1,0 +1,19 @@
+---
+interface Props {
+  name: string;
+  title: string;
+}
+
+const { name, title } = Astro.props;
+---
+
+<header class="mb-32 sm:mb-40">
+  <h1 class="text-md mb-2">
+    <a href="/" class="text-lg inline-block font-light no-underline hover:text-gray-600 transition-colors">
+      {name}
+    </a>
+  </h1>
+  <p class="text-sm mt-2 text-gray-500 font-light">
+    {title}
+  </p>
+</header> 
