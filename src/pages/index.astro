@@ -1,5 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Section from '../components/Section.astro';
+import Card from '../components/Card.astro';
+import TimelineItem from '../components/TimelineItem.astro';
 import { projects } from '../data/projects.json';
 import { timeline } from '../data/timeline.json';
 
@@ -21,149 +25,68 @@ const projectsWithStars = await Promise.all(
     stars: await getGitHubStars(project.href),
   }))
 );
-
 ---
 
 <Layout title="Wojciech Wrotek">
   <div class="w-full px-4 py-24 text-gray-800">
-    <header class="mb-32 sm:mb-40">
-      <h1 class="text-md mb-2">
-        <a href="/" class="text-lg inline-block font-light no-underline hover:text-gray-600 transition-colors">
-          Wojciech Wrotek
-        </a>
-      </h1>
-      <p class="text-sm mt-2 text-gray-500 font-light">
-        React/Next.js Software Developer
-      </p>
-    </header>
+    <Header name="Wojciech Wrotek" title="React/Next.js Software Developer" />
 
     <main class="space-y-32 sm:space-y-40">
-      <section aria-labelledby="about-heading">
-        <h2 id="about-heading" class="mb-6 font-light text-lg">About</h2>
+      <Section title="About" id="about-heading">
         <p class="text-sm text-gray-600 font-light leading-relaxed">
           As a React/Next.js Software Developer at
-          <a
-            href="https://blazity.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="hover:text-blazity font-light"
-          >Blazity</a>, I specialize in developing fast, scalable web applications, always
-          prioritizing client satisfaction. Currently, I'm pursuing a master's
-          degree in Industry 4.0 at the
-          <a
-            href="https://ue.poznan.pl/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="hover:text-uep font-light"
-          >Poznań University of Economics and Business</a>. Outside of work, I'm a former professional swimmer and a
-          passionate car enthusiast.
+          <a href="https://blazity.com/" target="_blank" rel="noopener noreferrer" class="hover:text-blazity font-light">
+            Blazity
+          </a>, I specialize in developing fast, scalable web applications, always prioritizing client satisfaction. 
+          Currently, I'm pursuing a master's degree in Industry 4.0 at the
+          <a href="https://ue.poznan.pl/" target="_blank" rel="noopener noreferrer" class="hover:text-uep font-light">
+            Poznań University of Economics and Business
+          </a>. Outside of work, I'm a former professional swimmer and a passionate car enthusiast.
         </p>
-      </section>
+      </Section>
 
-      <section aria-labelledby="open-source-heading">
-        <h2 id="open-source-heading" class="mb-6 font-light text-lg">Open Source</h2>
+      <Section title="Open Source" id="open-source-heading">
         <ul class="space-y-2">
           {projectsWithStars.map((project) => (
-            <li>
-              <a
-                href={project.href}
-                rel="noopener noreferrer"
-                target="_blank"
-                class={`block px-4 py-2 no-underline rounded-lg hover:backdrop-blur-sm hover:bg-white/50 transition-all`}
-              >
-                <div class="flex items-start">
-                  <div class="flex-grow">
-                    <div class="flex align-center justify-between">
-                      <h3 class="text-sm font-light">{project.title}</h3>
-                      {project.stars > 0 && (
-                        <div
-                          class="ml-2 flex items-center gap-1 text-xs text-gray-400"
-                          aria-label={`${project.stars} GitHub stars`}
-                        >
-                          {project.stars}
-                          <svg
-                            width="10"
-                            height="10"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          >
-                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                          </svg>
-                        </div>
-                      )}
-                    </div>
-                    <p class="text-sm font-light text-gray-500 mt-1">{project.description}</p>
-                  </div>
-                </div>
-              </a>
-            </li>
+            <Card {...project} />
           ))}
         </ul>
-      </section>
+      </Section>
 
-      <section aria-labelledby="timeline-heading">
-        <h2 id="timeline-heading" class="mb-6 font-light text-lg">Timeline</h2>
+      <Section title="Timeline" id="timeline-heading">
         <ol class="space-y-8">
           {timeline.map((yearData) => (
-            <li class="relative w-full">
-              <time class="mb-2 text-sm font-medium text-gray-500">
-                {yearData.year}
-              </time>
-              <ul class="space-y-2 mt-2">
-                {yearData.events.map((item) => (
-                  <li>
-                    <a
-                      href={item.href}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      class={`block px-4 py-2 no-underline rounded-lg hover:backdrop-blur-sm hover:bg-white/50 transition-all`}
-                    >
-                      <div class="flex items-start">
-                        <div class="flex-grow">
-                          <h3 class="text-sm font-light">{item.title}</h3>
-                          <p class="text-sm font-light text-gray-500 mt-1">{item.description}</p>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </li>
+            <TimelineItem year={yearData.year} events={yearData.events} />
           ))}
         </ol>
-      </section>
+      </Section>
 
-      <section aria-labelledby="tools-heading">
-        <h2 id="tools-heading" class="mb-6 font-light text-lg">Tools</h2>
+      <Section title="Tools" id="tools-heading">
         <ul class="text-sm text-gray-600 font-light leading-relaxed space-y-1">
           <li>• Cursor as primary editor</li>
           <li>• GPT-4 & Claude 3.5 Sonnet for AI assistance</li>
           <li>• MacBook Pro M3 (18GB/512GB) / MacBook Pro M1 (16GB/1TB) / iPad Air M1</li>
         </ul>
-      </section>
+      </Section>
 
-      <section aria-label="Social links">
+      <Section>
         <p class="text-sm font-light text-gray-700">
           More about me on
           <a
             href="https://www.linkedin.com/in/wojtek-wrotek-8b337519b/"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-blue-600 hover:text-blue-800 transition-colors"
+            class="hover:text-blue-800 transition-colors"
           >LinkedIn</a>
           and more code on
           <a
             href="https://github.com/woywro"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-blue-600 hover:text-blue-800 transition-colors"
+            class="hover:text-blue-800 transition-colors"
           >GitHub</a>.
         </p>
-      </section>
+      </Section>
     </main>
   </div>
 </Layout>

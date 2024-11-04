@@ -1,0 +1,48 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  description: string;
+  stars?: number;
+}
+
+const { href, title, description, stars } = Astro.props;
+---
+
+<li>
+  <a
+    href={href}
+    rel="noopener noreferrer"
+    target="_blank"
+    class="block px-4 py-2 no-underline rounded-lg bg-transparent hover:bg-grey-100 hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:scale-[1.005] transition-all duration-200 hover:-translate-y-0.5"
+  >
+    <div class="flex items-start">
+      <div class="flex-grow">
+        <div class="flex align-center justify-between">
+          <h3 class="text-sm font-light">{title}</h3>
+          {stars && stars > 0 && (
+            <div
+              class="ml-2 flex items-center gap-1 text-xs text-gray-400"
+              aria-label={`${stars} GitHub stars`}
+            >
+              {stars}
+              <svg
+                width="10"
+                height="10"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+            </div>
+          )}
+        </div>
+        <p class="text-sm font-light text-gray-500 mt-1">{description}</p>
+      </div>
+    </div>
+  </a>
+</li> 

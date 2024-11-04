@@ -1,0 +1,31 @@
+---
+import Card from './Card.astro';
+
+interface Event {
+  href: string;
+  title: string;
+  description: string;
+}
+
+interface Props {
+  year: string | number;
+  events: Event[];
+}
+
+const { year, events } = Astro.props;
+---
+
+<li class="relative w-full">
+  <time class="mb-2 text-sm font-medium text-gray-500">
+    {year}
+  </time>
+  <ul class="space-y-2 mt-2">
+    {events.map((item) => (
+      <Card 
+        href={item.href}
+        title={item.title}
+        description={item.description}
+      />
+    ))}
+  </ul>
+</li> 
