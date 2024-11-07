@@ -10,7 +10,7 @@ const { title, id, class: className } = Astro.props;
 
 <section aria-labelledby={id} class={className}>
   {title && (
-    <h2 id={id} class="mb-6 font-light text-lg">{title}</h2>
+    <h2 id={id} class="mb-6 font-light text-xl">{title}</h2>
   )}
   <slot />
 </section> 
