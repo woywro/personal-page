@@ -5,6 +5,7 @@ import Section from '../components/Section.astro';
 import Card from '../components/Card.astro';
 import TimelineItem from '../components/TimelineItem.astro';
 import { projects } from '../data/projects.json';
+import { experiments } from '../data/experiments.json';
 import { timeline } from '../data/timeline.json';
 
 async function getGitHubStars(repoUrl: string): Promise<number> {
@@ -23,6 +24,13 @@ const projectsWithStars = await Promise.all(
   projects.map(async (project) => ({
     ...project,
     stars: await getGitHubStars(project.href),
+  }))
+);
+
+const experimentsWithStars = await Promise.all(
+  experiments.map(async (experiment) => ({
+    ...experiment,
+    stars: await getGitHubStars(experiment.href),
   }))
 );
 ---
@@ -45,6 +53,14 @@ const projectsWithStars = await Promise.all(
         <ul class="space-y-2">
           {projectsWithStars.map((project) => (
             <Card {...project} />
+          ))}
+        </ul>
+      </Section>
+
+      <Section title="Experiments" id="experiments-heading">
+        <ul class="space-y-2">
+          {experimentsWithStars.map((experiment) => (
+            <Card {...experiment} />
           ))}
         </ul>
       </Section>

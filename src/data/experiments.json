@@ -1,0 +1,9 @@
+{
+  "experiments": [
+    {
+      "href": "https://github.com/woywro/hybrid-rate-limiting-nextjs",
+      "title": "Hybrid Rate Limiting in Next.js",
+      "description": "Experimental implementation of a two-tier rate limiting system for Next.js API routes combining LRU Cache (in-memory) with Redis persistence. Likely to reduce Redis costs."
+    }
+  ]
+}
