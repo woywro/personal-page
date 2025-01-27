@@ -1,5 +1,4 @@
 ---
-import '@fontsource-variable/inter';
 interface Props {
   title: string;
 }
@@ -16,7 +15,7 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="font-sans antialiased mx-auto w-full max-w-[600px] relative">
+  <body class="antialiased mx-auto w-full max-w-[600px] relative">
     <slot />
   </body>
 </html>

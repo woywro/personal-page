@@ -9,9 +9,6 @@ export default {
         blazity: '#fc4404',
         uep: '#078847',
       },
-      fontFamily: {
-        sans: ['Inter Variable', 'Inter', 'sans-serif'],
-      },
       fontWeight: {
         light: '300',
       },
