@@ -1,0 +1,19 @@
+{
+  "projects": [
+    {
+      "href": "https://github.com/woywro/next-lazy-hydration-on-scroll",
+      "title": "next-lazy-hydration-on-scroll",
+      "description": "Progressive hydration implementation for Next.js. Lazy loads and hydrates components on scroll. Takes the work from the main thread improving both TBT and bundle size."
+    },
+    {
+      "href": "https://github.com/Blazity/next-maintenance-mode",
+      "title": "next-maintenance-mode",
+      "description": "Middleware for handling page maintenance mode on platforms like Vercel. Supports both upstash and Vercel's edge-config as data providers. Uses LRU cache for cost optimization."
+    },
+    {
+      "href": "https://github.com/woywro/next-loading-box",
+      "title": "next-loading-box",
+      "description": "Simple React component designed for Next.js to manage route change loading states. Excellent to improve the UX and perceived performance."
+    }
+  ]
+}

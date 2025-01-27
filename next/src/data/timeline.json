@@ -1,0 +1,109 @@
+{
+  "timeline": [
+    {
+      "year": 2024,
+      "events": [
+        {
+          "title": "Education: Started Masters degree in Industry 4.0",
+          "description": "Began a two-year program (2024-2026) at the Poznań University of Economics and Business.",
+          "href": "https://ue.poznan.pl/"
+        },
+        {
+          "title": "Open Source: next-loading-box",
+          "description": "Developed a lightweight React component for Next.js to handle route change loading states, improving UX during page transitions.",
+          "href": "https://github.com/woywro/next-loading-box"
+        },
+        {
+          "title": "Education: Achieved Bachelor's degree in Computer Science and Economics",
+          "description": "Graduated from the University of Gdańsk.",
+          "href": "https://ug.edu.pl/"
+        },
+        {
+          "title": "Article: AMP in 2024 — A Forgotten Relic?",
+          "description": "Explored the relevance of Accelerated Mobile Pages (AMP) in modern web development, particularly in the context of React and Next.js performance optimization.",
+          "href": "https://medium.com/@woywro/react-next-js-performance-optimization-explained-amp-in-2024-a-forgotten-relic-17a86889dade"
+        },
+        {
+          "title": "Open Source: next-api-rate-limit",
+          "description": "Created a cost-efficient API route rate limiting solution for Next.js applications using Redis (KV/Upstash) and LRU Cache.",
+          "href": "https://github.com/woywro/next-api-rate-limit"
+        },
+        {
+          "title": "Article: Navigating Through Memoization's Complexity Maze",
+          "description": "Authored an in-depth guide on memoization in React, covering implementation strategies and addressing associated challenges to optimize application performance.",
+          "href": "https://medium.com/@woywro/react-next-js-performance-optimization-explained-navigating-through-memoizations-complexity-maze-daafba63c318"
+        },
+        {
+          "title": "Open Source: next-lazy-hydration-on-scroll",
+          "description": "Developed a solution for progressive hydration of prerendered components in Next.js.",
+          "href": "https://github.com/woywro/next-lazy-hydration-on-scroll"
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "events": [
+        {
+          "title": "Open Source: next-maintenance-mode",
+          "description": "Contributed to the development of a Next.js package for implementing maintenance mode in applications.",
+          "href": "https://github.com/Blazity/next-maintenance-mode"
+        },
+        {
+          "title": "Article: Protecting Next.js API: Evaluating Three Rate Limiting Approaches",
+          "description": "Analyzed and compared different rate limiting strategies to protect Next.js APIs from overload and potential security threats.",
+          "href": "https://blazity.com/blog/protecting-nextjs-api-evaluating-three-rate-limiting-approaches"
+        },
+        {
+          "title": "Article: Implementing maintenance mode in Next.js apps",
+          "description": "Wrote a comprehensive guide on integrating maintenance mode functionality in Next.js applications to manage planned downtimes.",
+          "href": "https://blazity.com/blog/implementing-maintenance-mode-in-nextjs-apps"
+        },
+        {
+          "title": "Education: Total TypeScript (by Matt Pocock)",
+          "description": "Completed an extensive TypeScript course, covering advanced concepts and best practices...",
+          "href": "https://www.totaltypescript.com/"
+        },
+        {
+          "title": "Article: Choosing a Data Fetching Library: A Look at React Query and SWR",
+          "description": "Conducted an in-depth comparison of top data-fetching libraries for Next.js, focusing on React Query and SWR.",
+          "href": "https://blazity.com/blog/choosing-data-fetching-library-look-at-react-query-and-swr"
+        },
+        {
+          "title": "Education: Contentful Certified Professional",
+          "description": "Achieved certification demonstrating expertise in using Contentful Platform.",
+          "href": "https://training.contentful.com/student/award/Qn6hDzcHxYktYKTeXomUDB3G"
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "events": [
+        {
+          "title": "Started working at Blazity",
+          "description": "Joined Blazity as a React/Next.js Developer, contributing to cutting-edge web development projects and expanding professional experience.",
+          "href": "https://www.blazity.com"
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "events": [
+        {
+          "title": "Education: Started Bachelor's degree in Computer Science and Economics",
+          "description": "Enrolled in a dual-major program (2021-2024) at the University of Gdańsk, combining technology and business studies.",
+          "href": "https://ug.edu.pl/"
+        }
+      ]
+    },
+    {
+      "year": 2019,
+      "events": [
+        {
+          "title": "Education: Achieved C1 Advanced English Certification (CAE)",
+          "description": "Obtained the C1 Advanced certificate from Cambridge University Press and Assessment English, demonstrating high-level English language proficiency.",
+          "href": ""
+        }
+      ]
+    }
+  ]
+}
