@@ -10,6 +10,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Wojciech Wrotek',
   description: 'React/Next.js Software Developer',
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({
