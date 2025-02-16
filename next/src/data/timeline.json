@@ -24,11 +24,6 @@
           "href": "https://medium.com/@woywro/react-next-js-performance-optimization-explained-amp-in-2024-a-forgotten-relic-17a86889dade"
         },
         {
-          "title": "Open Source: next-api-rate-limit",
-          "description": "Created a cost-efficient API route rate limiting solution for Next.js applications using Redis (KV/Upstash) and LRU Cache.",
-          "href": "https://github.com/woywro/next-api-rate-limit"
-        },
-        {
           "title": "Article: Navigating Through Memoization's Complexity Maze",
           "description": "Authored an in-depth guide on memoization in React, covering implementation strategies and addressing associated challenges to optimize application performance.",
           "href": "https://medium.com/@woywro/react-next-js-performance-optimization-explained-navigating-through-memoizations-complexity-maze-daafba63c318"
